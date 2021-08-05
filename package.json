@@ -4,8 +4,18 @@
   "description": "Handling media-routes/sensors/events during a audio/video chat on React Native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:plugin": "tsc --build plugin",
+    "lint:plugin": "eslint plugin/src/*"
   },
+  "files": [
+    "ios/**/*",
+    "android/**/*",
+    "*.podspec",
+    "index.js",
+    "plugin/**/*",
+    "app.plugin.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zxcpoiu/react-native-incall-manager.git"
@@ -29,5 +39,20 @@
   "homepage": "https://github.com/zxcpoiu/react-native-incall-manager#readme",
   "peerDependencies": {
     "react-native": ">=0.40.0"
+  },
+  "dependencies": {
+    "@expo/config-plugins": "^3.0.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node10": "^1.0.8",
+    "@types/react-native": "^0.60.0",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.2.4"
   }
 }
