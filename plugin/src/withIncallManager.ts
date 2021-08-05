@@ -1,5 +1,5 @@
 import {
-  // AndroidConfig,
+  AndroidConfig,
   ConfigPlugin,
   createRunOncePlugin,
   withInfoPlist
@@ -28,9 +28,9 @@ const withIosPermissions: ConfigPlugin<Props> = (c, {} = {}) => {
  * Adds permissions to the `AndroidManifest.xml`
  */
 const withAndroidPermissions: ConfigPlugin = config => {
-  // return AndroidConfig.Permissions.withPermissions(config, [
-  // ]);
-  return config;
+  return AndroidConfig.Permissions.withPermissions(config, [
+      "android.permission.BLUETOOTH"
+  ]);
 };
 
 const withIncallManager: ConfigPlugin<Props | void> = (config, props = {}) => {
